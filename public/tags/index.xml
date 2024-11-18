@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
-    <title>Tags on My New Hugo Site</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on My New Hugo Site</description>
+    <title>Tags on Jstrah00 web / blog</title>
+    <link>https://jstrah00.github.io/tags/</link>
+    <description>Recent content in Tags on Jstrah00 web / blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/img/icon.svg</icon>
+    <language>en-us</language><atom:link href="https://jstrah00.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><icon>https://jstrah00.github.io/img/icon.svg</icon>
     
   </channel>
 </rss>
