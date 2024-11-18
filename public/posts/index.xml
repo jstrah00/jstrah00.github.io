@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Nov 2024 18:51:18 -0300</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/img/icon.svg</icon>
+    
+    
+    <item>
+      <title>First_post</title>
+      <link>http://localhost:1313/posts/first_post/</link>
+      <pubDate>Mon, 18 Nov 2024 18:51:18 -0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/first_post/</guid>
+      <description><![CDATA[<h1 id="mi-primer-post">Mi primer post!</h1>
+<h2 id="esto-es-un-subtitulo">esto es un subtitulo</h2>
+<p>Aca ponemos algo de texto</p>
+<h3 id="un-sub-sub-titulo">un sub sub titulo</h3>
+<p>Con algo de texto en <em>negrita</em></p>
+<h4 id="mas-chico-todavia">mas chico todavia</h4>
+<p><em>esto hace algo?</em></p>
+<p>Visit the <a href="https://gohugo.io">Hugo</a> website!</p>
+<h5 id="aun-mas">AUN MAS</h5>
+<p>This is <strong>bold</strong> text, and this is <em>emphasized</em> text.</p>
+<h6 id="byeee">byeee</h6>
+<pre tabindex="0"><code>func main() {
+    fmt.Println(&#34;Hello, 世界&#34;)
+}
+</code></pre>]]></description>
+      
+    </item>
+    
+    
+  </channel>
+</rss>
