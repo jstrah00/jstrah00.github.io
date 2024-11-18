@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
     <title>Jstrah00 web / blog</title>
-    <link>https://jstrah00.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Jstrah00 web / blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Nov 2024 18:51:18 -0300</lastBuildDate><atom:link href="https://jstrah00.github.io/index.xml" rel="self" type="application/rss+xml" /><icon>https://jstrah00.github.io/img/icon.svg</icon>
+    <lastBuildDate>Mon, 18 Nov 2024 18:51:18 -0300</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/img/icon.svg</icon>
     
     
     <item>
       <title>First_post</title>
-      <link>https://jstrah00.github.io/posts/first_post/</link>
+      <link>http://localhost:1313/posts/first_post/</link>
       <pubDate>Mon, 18 Nov 2024 18:51:18 -0300</pubDate>
       
-      <guid>https://jstrah00.github.io/posts/first_post/</guid>
+      <guid>http://localhost:1313/posts/first_post/</guid>
       <description><![CDATA[<h1 id="mi-primer-post">Mi primer post!</h1>
 <h2 id="esto-es-un-subtitulo">esto es un subtitulo</h2>
 <p>Aca ponemos algo de texto</p>
