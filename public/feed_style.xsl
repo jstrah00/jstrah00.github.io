@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
         <meta charset="UTF-8"/>
         
-        <link type="text/css" rel="stylesheet" href="http://localhost:1313/css/styles.abbd6311bb4b6ca58f8e7398140529245ae0f6428b759fcd830742eee2619eabb900ba9914a9affb82aa9a16a9b9ea727bb315315a976a0db0e7513a5f12c504.css" integrity="sha512-q71jEbtLbKWPjnOYFAUpJFrg9kKLdZ/NgwdC7uJhnqu5ALqZFKmv+4Kqmhapuepye7MVMVqXag2w51E6XxLFBA==" />
+        <link type="text/css" rel="stylesheet" href="http://localhost:1313/css/styles.6f02651af1f616562b0d07de8988974fd578373537834bb2b0dd100e372e2138e367fbaacec97f96a54ebf4d3e6ff406707516a672d8b386b53fef0304e036f9.css" integrity="sha512-bwJlGvH2FlYrDQfeiYiXT9V4NzU3g0uysN0QDjcuITjjZ/uqzsl/lqVOv00+b/QGcHUWpnLYs4a1P+8DBOA2+Q==" />
         <style>
           .aboutfeeds {
             margin: 24px 0; padding: 12px;
@@ -59,7 +59,7 @@
           </div>
           <div class="head">
             <div class="avatar">
-              <img class="logo" src="<no value>" alt="Site Logo"/>
+              <img class="logo" src="/logo.png" alt="Site Logo"/>
             </div>
             <div class="description">
               <p><xsl:value-of select="/rss/channel/description"/></p>

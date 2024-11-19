@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
-    <title>Jstrah00 web / blog</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Jstrah00 web / blog</description>
+    <title>Test on Jstrah00 web / blog</title>
+    <link>http://localhost:1313/tags/test/</link>
+    <description>Recent content in Test on Jstrah00 web / blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Nov 2024 18:51:18 -0300</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/logo.png</icon>
+    <lastBuildDate>Mon, 18 Nov 2024 18:51:18 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/test/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/logo.png</icon>
     
     
     <item>
@@ -31,10 +31,6 @@
 </code></pre>]]></description>
       
     </item>
-    
-    
-    
-    
     
     
   </channel>

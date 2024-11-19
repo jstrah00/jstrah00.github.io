@@ -2,3 +2,59 @@ baseURL = 'https://jstrah00.github.io/'
 languageCode = 'en-us'
 title = 'Jstrah00 web / blog'
 theme = 'hugo-ficurinia'
+
+paginate = 5  # number of articles per page in the index
+summaryLength = 20  # number of words for article summaries
+
+[params]
+    author = "Julian Strah"
+    description = "To live is to risk it all; otherwise you’re just an inert chunk of randomly assembled molecules drifting wherever the universe blows you."  # this will be added as metadata
+
+    # It's best to put these icons in the "static" folder of your site
+    logo = "/logo.png"
+    favicon = "/logo_small.png"  # 32x32
+    faviconIco = "/logo.ico"  # 32x32
+    appletouch = "/apple-touch-icon.png"  # 180x180
+    svgicon = "/logo.svg"
+    icon512 = "/icon512.png"  # 512x512 png image
+
+    logoRightOfTitle = false  # positions the logo to the right of the title; default: false
+
+    showTags = true  # show the Tags menu item; default true
+    showRss = false  # show the link for the RSS feed; default true
+    
+    paperCards = false  # enable paper card style; default false
+    buttonTags = false  # enable button tag style; default false
+    tagsInArticlePreview = true  # enable tags list in the article preview card
+    gridView = false  # show post list as a grid. goes well with paperCards
+    bigArticleTitle = true  # makes the title in the single article view bigger
+    navtype = "standard"  # changes the style of the pagination, available styles are: "standard", "circles"
+    enableShadow = true  # shows a shadow around some elements
+    menuStyle = "standard"  # changes the style of the main site navigation menu, available styles are: "standard", "buttons"
+    inputStyle = "standard" # changes the style of inputs (like the searchbar), available styles are: "standard", "buttons"
+
+    enableFeatured = false  # enable a particular view for articles marked as featured (featured: true in the article frontmatter)
+
+    underlineTitleLinks = false  # show an underline also for links that are titles
+
+[menu]
+    # these links will be added to the main navigation menu, sorted by weight
+    # other elements in this menu are added automatically from the "pages" folder
+    # the folder it will look into can be customized with the pages variable
+    # in params above
+    [[menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 10
+    # these links (menu.icons) will be added as icon links below the main nav
+    [[menu.icons]]
+        identifier = "github"
+        name = "GitHub"
+        url = "https://github.com/jstrah00"
+        weight = 10
+    [[menu.icons]]
+        identifier = "linkedin"
+        name = "LinkedIn"
+        url = "https://gitlab.com/gabmus/hugo-ficurinia"
+        weight = 20

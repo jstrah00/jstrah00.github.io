@@ -8,7 +8,16 @@
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-11-18T18:51:18-03:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/markdown/</loc>
+    <lastmod>2024-11-18T18:51:18-03:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-11-18T18:51:18-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-11-18T18:51:18-03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/test/</loc>
     <lastmod>2024-11-18T18:51:18-03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
@@ -16,7 +25,5 @@
     <loc>http://localhost:1313/manifest/index.json</loc>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>
