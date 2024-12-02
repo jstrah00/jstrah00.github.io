@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
-    <title>Posts on Jstrah00 web / blog</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Jstrah00 web / blog</description>
+    <title>Command-Injection on Jstrah00 web / blog</title>
+    <link>http://localhost:1313/tags/command-injection/</link>
+    <description>Recent content in Command-Injection on Jstrah00 web / blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Dec 2024 17:11:00 -0300</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/logo.png</icon>
+    <lastBuildDate>Mon, 02 Dec 2024 17:11:00 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/command-injection/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/logo.png</icon>
     
     
     <item>
@@ -113,7 +113,7 @@ I learned a lot from it, especially these key points:</p>
 <li>Nmap is POWERFUL.</li>
 </ul>
 <p>So that was it! I hope you enjoyed reading this and learned something new.
-If you have any questions, comments, or anything else you want to discuss, feel free to contact me!</p>
+If you have any questions, comments, or anything else you want to discuss, feel free to contact me at any of the sources provided in the About page.</p>
 <p>Thanks for reading! Have a nice day!</p>
 ]]></description>
       

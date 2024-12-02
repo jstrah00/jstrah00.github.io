@@ -10,6 +10,12 @@ summaryLength = 20  # number of words for article summaries
     author = "Julian Strah"
     description = "To live is to risk it all; otherwise you’re just an inert chunk of randomly assembled molecules drifting wherever the universe blows you."  # this will be added as metadata
 
+    # multipliers applied to font sizes, useful for custom fonts that may be too big or too small
+    titleFontSizeMultiplier = 1.5
+    mainFontSizeMultiplier = 1.5
+    monoFontSizeMultiplier = 1.5
+
+
     # It's best to put these icons in the "static" folder of your site
     logo = "/logo.png"
     favicon = "/logo_small.png"  # 32x32
@@ -56,5 +62,5 @@ summaryLength = 20  # number of words for article summaries
     [[menu.icons]]
         identifier = "linkedin"
         name = "LinkedIn"
-        url = "https://gitlab.com/gabmus/hugo-ficurinia"
+        url = "https://www.linkedin.com/in/julian-strah/"
         weight = 20

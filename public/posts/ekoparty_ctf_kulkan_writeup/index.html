@@ -1,20 +1,218 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
-  <channel>
-    <title>Posts on Jstrah00 web / blog</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Jstrah00 web / blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 02 Dec 2024 17:11:00 -0300</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/logo.png</icon>
+<!DOCTYPE html>
+<html class="" lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta name="robots" content="noai, noimageai">
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <link
+    rel="icon"
+    href='/logo_small.png'
+/>
+<link
+    rel="shortcut icon"
+    href='/logo.ico'
+    type="image/x-icon"
+/>
+<link
+    rel="apple-touch-icon"
+    href='/apple-touch-icon.png'
+/>
+
+    <link
+        rel="icon"
+        href='/logo.svg'
+        type="image/svg+xml"
+    />
+
+<title>
+        
+            Kulkan Writeup - EKO Party CTF 2024  &ndash;
+        
+        Jstrah00 web / blog
+    </title>
+
+    
+    <link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />
+    <link href="/jetbrains-mono/jetbrains-mono.css" rel="stylesheet" />
+
     
     
-    <item>
-      <title>Kulkan Writeup - EKO Party CTF 2024</title>
-      <link>http://localhost:1313/posts/ekoparty_ctf_kulkan_writeup/</link>
-      <pubDate>Mon, 02 Dec 2024 17:11:00 -0300</pubDate>
-      
-      <guid>http://localhost:1313/posts/ekoparty_ctf_kulkan_writeup/</guid>
-      <description><![CDATA[<p>Hi! I hope this finds you well on the other side of the screen :)
+    <link type="text/css" rel="stylesheet" href=http://localhost:1313/css/styles.aca12ee857b25badcaa1a0c66fd9ff25d61dbecb457549c8c29f0fd7e5d2ac68d1eaa182ed86401a94e78689a2d3d5d5696aceff1c760c1cd0a4edd612a81941.css integrity="sha512-rKEu6FeyW63KoaDGb9n/JdYdvstFdUnIwp8P1&#43;XSrGjR6qGC7YZAGpTnhomi09XVaWrO/xx2DBzQpO3WEqgZQQ==" />
+<meta name="author" content="Julian Strah" />
+
+    
+        <meta name="keywords" content='command-injection, ctf, writeup' />
+    
+    
+        <meta name="description" content="inds you well on the other side of the screen :)
+TLDR; if you just want to focus on the write-up, you can skip the context section ;)&lt;/p&gt;" />
+    
+
+<meta property="og:site_name"
+    content='Jstrah00 web / blog' />
+
+    <meta property="og:title" content="Kulkan Writeup - EKO Party CTF 2024" />
+    <meta property="og:type" content="article" />
+    
+    <meta
+        property="article:author" content="Julian Strah" />
+    <meta
+        property="article:published_time"
+        content='2024-12-02T17:11:00Z-0300' />
+    
+        
+            <meta property="article:tag" content="command-injection" />
+        
+            <meta property="article:tag" content="ctf" />
+        
+            <meta property="article:tag" content="writeup" />
+        
+    
+    <meta property="og:url" content="http://localhost:1313/posts/ekoparty_ctf_kulkan_writeup/" />
+    
+    
+    <meta property="og:image"
+        content="http://localhost:1313/icon512.png" />
+    
+        <meta property="og:description" content="&lt;p&gt;Hi! I hope this finds you well on the other side of the screen :)
+TLDR; if you just want to focus on the write-up, you can skip the context section ;)&lt;/p&gt;" />
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain"
+      content='localhost:1313'
+/>
+<meta property="twitter:url" content="http://localhost:1313/posts/ekoparty_ctf_kulkan_writeup/" />
+
+
+    <meta name="twitter:title" content="Kulkan Writeup - EKO Party CTF 2024" />
+    
+    
+    
+    <meta name="twitter:image"
+        content="http://localhost:1313/icon512.png" />
+    
+        <meta name="twitter:description" content="&lt;p&gt;Hi! I hope this finds you well on the other side of the screen :)
+TLDR; if you just want to focus on the write-up, you can skip the context section ;)&lt;/p&gt;" />
+    
+
+<link rel="manifest" href="/manifest/index.json" />
+</head>
+
+
+<body>
+        <div id="baseContainer"><header class="">
+<div class="titleAndSearchContainer">
+        <div id="titleContainer">
+            
+                <a class="unstyledLink" href="/">
+                    <img src='/logo.png' alt='Logo'/>
+                </a>
+            
+            <div class="rightOfLogo">
+                <div class="titleAndHamburger">
+                    <h1>
+                        <a class="unstyledLink" href="/">Jstrah00 web / blog</a>
+                        
+                    </h1>
+                    
+                </div>
+                <div id="wide_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+            <li><a href="/posts/">Posts</a></li>
+        
+        
+        
+        
+        
+        
+            <li><a href="/about/">About</a></li>
+        
+        
+            <li><a href="/tags/">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+            </div>
+        </div>
+        <div class="search">
+    <input id="searchbar" type="text" placeholder='Search' />
+    <span class="nerdlink" onclick="newSearch();">&#xf002;</span>
+</div>
+<script>
+    function newSearch() {
+        let term = searchbar.value.trim();
+        if (!term) return;
+        location.href = `/search/?q=${term}`;
+    }
+    searchbar.onkeyup = (ev) => {if (ev.keyCode == 13) newSearch()};
+</script>
+
+    </div>
+    <div id="links">
+        
+        
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://github.com/jstrah00">
+    
+    
+        &#xf09b;
+    
+    <span>
+        GitHub
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://www.linkedin.com/in/julian-strah/">
+    
+    
+        &#xf0e1;
+    
+    <span>
+        LinkedIn
+    </span>
+</a>
+
+    </div>
+    
+
+</header>
+<div id="contentContainer">
+                <div id="content">
+                    <main>
+<article class="card single">
+    
+        <h1>Kulkan Writeup - EKO Party CTF 2024</h1>
+    
+    
+        <p class="date">
+            <span title='Date'>󰃭 </span>
+    2024-12-02
+
+
+        </p>
+    
+    
+    
+    
+    <div><p>Hi! I hope this finds you well on the other side of the screen :)
 TLDR; if you just want to focus on the write-up, you can skip the context section ;)</p>
 <h2 id="context">Context</h2>
 <p>This is my first write up, and also my first post on my site, so I would like to provide some context. My name is Julian, I work as a cybersecurity engineer at a payments startup. I have always enjoyed offensive cybersecurity and penetration testing, but never really focused on it until earlier this year. And as part of this journey, I also started playing CTFs.</p>
@@ -115,10 +313,47 @@ I learned a lot from it, especially these key points:</p>
 <p>So that was it! I hope you enjoyed reading this and learned something new.
 If you have any questions, comments, or anything else you want to discuss, feel free to contact me!</p>
 <p>Thanks for reading! Have a nice day!</p>
-]]></description>
-      
-    </item>
-    
-    
-  </channel>
-</rss>
+</div>
+</article>
+
+    <hr />
+    <p class="articleTagsContainer">
+        <span> </span>
+        <strong>Tags:</strong>
+        
+            <a
+                
+                href="/tags/command-injection/">#command-injection</a>
+        
+            <a
+                
+                href="/tags/ctf/">#ctf</a>
+        
+            <a
+                
+                href="/tags/writeup/">#writeup</a>
+        
+    </p>
+
+
+
+
+
+
+                    </main><footer>
+    <hr />
+
+<p><small>
+        2024 &copy; 
+    </small></p>
+    <p><small>
+        <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.
+    </small></p>
+</footer>
+</div>
+            </div>
+        </div>
+
+
+</body>
+</html>

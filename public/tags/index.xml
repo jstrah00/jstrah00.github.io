@@ -5,15 +5,15 @@
     <description>Recent content in Tags on Jstrah00 web / blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Nov 2024 18:51:18 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/logo.png</icon>
+    <lastBuildDate>Mon, 02 Dec 2024 17:11:00 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/logo.png</icon>
     
     
     <item>
-      <title>Markdown</title>
-      <link>http://localhost:1313/tags/markdown/</link>
-      <pubDate>Mon, 18 Nov 2024 18:51:18 -0300</pubDate>
+      <title>Command-Injection</title>
+      <link>http://localhost:1313/tags/command-injection/</link>
+      <pubDate>Mon, 02 Dec 2024 17:11:00 -0300</pubDate>
       
-      <guid>http://localhost:1313/tags/markdown/</guid>
+      <guid>http://localhost:1313/tags/command-injection/</guid>
       <description><![CDATA[]]></description>
       
     </item>
@@ -21,11 +21,23 @@
     
     
     <item>
-      <title>Test</title>
-      <link>http://localhost:1313/tags/test/</link>
-      <pubDate>Mon, 18 Nov 2024 18:51:18 -0300</pubDate>
+      <title>Ctf</title>
+      <link>http://localhost:1313/tags/ctf/</link>
+      <pubDate>Mon, 02 Dec 2024 17:11:00 -0300</pubDate>
       
-      <guid>http://localhost:1313/tags/test/</guid>
+      <guid>http://localhost:1313/tags/ctf/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Writeup</title>
+      <link>http://localhost:1313/tags/writeup/</link>
+      <pubDate>Mon, 02 Dec 2024 17:11:00 -0300</pubDate>
+      
+      <guid>http://localhost:1313/tags/writeup/</guid>
       <description><![CDATA[]]></description>
       
     </item>
