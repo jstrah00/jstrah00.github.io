@@ -23,6 +23,7 @@ The conference was amazing, there were a lot of great talks and the energy of th
 Like almost every cybersec conference, it had a CTF! So of course I signed up. I signed up as a team with my coworkers, but they couldn&rsquo;t make it to the conference, and since they were working while I was there, they didn&rsquo;t have a lot of time to participate in the CTF remotely.
 So since I was on my own and spent most of the day at the conference bouncing between amazing talks, I didn&rsquo;t have a lot of time to focus on the CTF. Anyway, I really enjoyed one of the challenges, so I thought it was a great excuse to write my first post. So here we are.</p>
 <p>As I said, I&rsquo;m just starting out on the &ldquo;offensive&rdquo; side of cybersecurity, so I&rsquo;m writing this as I&rsquo;d like to be explained if I were on the other side of the screen. Although I have no doubt that anyone reading it, regardless of their expertise, will find something useful here.</p>
+<p>P.S. Big thanks to my coworkers for covering for me while I was away at the conference!</p>
 <h2 id="hands-on">Hands on</h2>
 <p>This is the challenge. We have a web application where our task is &ldquo;see if you can find a way to <strong>cat</strong> the flag&rdquo;. They give us a URL of an instancer that gives us 2 minutes to find the flag, but for testing and finding the vulnerability, they give us a zip with the source code.</p>
 <p><img src="/kulkan1.png" alt=""></p>

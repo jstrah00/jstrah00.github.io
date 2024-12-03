@@ -19,6 +19,8 @@ So since I was on my own and spent most of the day at the conference bouncing be
 
 As I said, I'm just starting out on the "offensive" side of cybersecurity, so I'm writing this as I'd like to be explained if I were on the other side of the screen. Although I have no doubt that anyone reading it, regardless of their expertise, will find something useful here.
 
+P.S. Big thanks to my coworkers for covering for me while I was away at the conference!
+
 ## Hands on
 
 This is the challenge. We have a web application where our task is "see if you can find a way to **cat** the flag". They give us a URL of an instancer that gives us 2 minutes to find the flag, but for testing and finding the vulnerability, they give us a zip with the source code.
